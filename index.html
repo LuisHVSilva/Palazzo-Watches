@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Owl carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="background-color">
+            <div class="logo_header background-color">
+                <a href="index.html" class="logo background-color">
+                    <img src="img/Logo.svg" alt="" class="background-color">
+                </a>
+                <button class="navbar_toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="main_nav background-color">
+                <li class="background-color">
+                    <a href="#" class="nav_links background-color">HOME</a>
+                </li>
+                <li class="background-color">
+                    <a href="#" class="nav_links background-color">CATÁLOGO</a>
+                </li>
+                <li class="background-color">
+                    <a href="#" class="nav_links background-color">SOBRE</a>
+                </li>
+                <li class="background-color">
+                    <a href="#" class="nav_links background-color">CONTATO</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="banner background-color">
+            <div class="texto">
+                <p class="title">O tempo ao seu lado com elegância</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Blanditiis adipisci, aut quaerat necessitatibus explicabo quia vero cum, cupiditate laudantium
+                    pariatur enim vel doloremque exercitationem fugiat itaque sunt minima rerum soluta? Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Numquam ea libero debitis natus aspernatur esse
+                    sapiente sint facilis ab provident blanditiis iure earum perferendis iste quibusdam, officia quis,
+                    modi excepturi.</p>
+                <div class="buttons">
+                    <a href="#"><button>Compre agora</button></a>
+                    <div class="bannerButton">
+
+                        <button><img src="img/seta-esquerda.svg" alt=""></button>
+                        <button><img src="img/seta-direita.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="bannerImage background-color">
+            <img src="img/watches/Relógio.png" alt="" class="background-color">
+
+            <p class="first">VICTORINOX</p>
+            <p class="last">SWISS ARMY MAVERICK</p>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="vitrine">
+            <p class="title">RECONSTRUA O TEMPO A SEU ESTILO</p>
+            <div class="owl-carousel">
+                <div class="item">
+                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <a href="">Ver relógio</a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <a href="">Ver relógio</a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <a href="">Ver relógio</a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <a href="">Ver relógio</a>
+                </div>
+                <div class="item">
+                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <a href="">Ver relógio</a>
+                </div>
+            </div>
+            
+            <a href="" class="linkAll">
+                <button class="buttonAll">CONHEÇA TODOS OS MODELOS</button>
+            </a>
+
+        </section>
+        
+        <section id="tempo">
+            <p class="title">REIVENTE O TEMPO</p>
+            <img src="img/linha-tempo.svg" alt="">            
+        </section>        
+        <section id="contato">
+            <p>Alguma dúvida?</p>
+            <p>Fale conosco</p>
+            <section>
+                
+            </section>
+        </section>
+        <section id="newsLetter"></section>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 3, // Número de itens visíveis no carousel
+                loop: true, // Repetir o carousel em loop
+                margin: 10, // Margem entre os itens
+                nav: true, // Exibir botões de navegação
+                responsive: {
+                    0: {
+                        items: 1 // Número de itens visíveis no carousel em telas menores
+                    },
+                    768: {
+                        items: 4 // Número de itens visíveis no carousel em telas maiores
+                    }
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
