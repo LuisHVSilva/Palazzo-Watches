@@ -42,32 +42,26 @@
                 </li>
             </ul>
         </nav>
-
+        
         <section class="banner background-color">
             <div class="texto">
-                <p class="title">O tempo ao seu lado com elegância</p>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Blanditiis adipisci, aut quaerat necessitatibus explicabo quia vero cum, cupiditate laudantium
-                    pariatur enim vel doloremque exercitationem fugiat itaque sunt minima rerum soluta? Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Numquam ea libero debitis natus aspernatur esse
-                    sapiente sint facilis ab provident blanditiis iure earum perferendis iste quibusdam, officia quis,
-                    modi excepturi.</p>
+                <p id="bannerTitle" class="title">O tempo ao seu lado com elegância</p>
+                <p id="bannerText" class="description"></p>
                 <div class="buttons">
                     <a href="#"><button>Compre agora</button></a>
                     <div class="bannerButton">
 
-                        <button><img src="img/seta-esquerda.svg" alt=""></button>
-                        <button><img src="img/seta-direita.svg" alt=""></button>
+                        <button id="leftButton" onclick="bannerChageLess()"><img src="img/icons/seta-esquerda.svg" alt=""></button>
+                        <button id="rightButton" onclick="bannerChagePlus()"><img src="img/icons/seta-direita.svg" alt=""></button>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="bannerImage background-color">
-            <img src="img/watches/Relógio.png" alt="" class="background-color">
+        <div id="bannerImage" class="background-color">
+            <img class="background-color" id="bannerImg">
 
-            <p class="first">VICTORINOX</p>
-            <p class="last">SWISS ARMY MAVERICK</p>
-
+            <p id="bannerBrand" class="first"></p>
+            <p id="bannerModel" class="last"></p>
         </div>
     </header>
 
@@ -110,7 +104,7 @@
 
         <section id="tempo">
             <p class="title">REIVENTE O TEMPO</p>
-            <img src="img/linha-tempo.svg" alt="">
+            <img src="img/icons/linha-tempo.svg" alt="">
         </section>
         <section id="contato">
             <section id="card">
@@ -140,22 +134,22 @@
 
                     <div class="fastContact">
                         <p class="title">Entre em contato de forma mais rápida</p>
-                        <a href=""><img src="img/Instagram.svg" alt="instagram-logo" id="instagram"></a>
-                        <a href=""><img src="img/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
+                        <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
+                        <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
                     </div>
 
                     <div class="social">
                         <p class="title">Não deixe de nos seguir</p>
-                        <a href=""><img src="img/Instagram.svg" alt="instagram-logo"></a>
+                        <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo"></a>
                     </div>
 
                     <small>&reg; No mercado há 2 anos prezando pela sua qualidade e conforto.</small>
                 </div>
             </section>
-        </section>        
+        </section>
     </main>
     <footer>
-        
+
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -201,7 +195,8 @@
         });
     </script>
 
-
+    <!--Banner JS-->
+    <script src="js/banner.js"></script>
 </body>
 
 </html>

@@ -43,8 +43,9 @@ header section.banner .buttons .bannerButton {
 header {
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 30% 90%;
+    grid-template-rows: 30% 100%;
     justify-content: center;
+    border: 4px solid red;    
 }
 
 /* ----- HEADER:NAV ----- */
@@ -170,7 +171,7 @@ header .banner .buttons button:hover {
 
 /* ----- HEADER:BANNERIMAGE ----- */
 
-header .bannerImage {
+header #bannerImage {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -184,30 +185,32 @@ header .bannerImage {
     background-repeat: no-repeat;
     background-position: right;
     background-size: auto 110%;
+    height: 416px;
 }
 
 
-header .bannerImage p {
+header #bannerImage p {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     background-color: transparent;
 }
 
-header .bannerImage p.first {
+header #bannerImage p.first {
     margin: 0 3%;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2em;    
 }
 
-header .bannerImage p.last {
+header #bannerImage p.last {
     margin-right: 10%;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2em;    
 }
 
-header .bannerImage img {
+header #bannerImage img {
     background-color: transparent;
-    width: auto;
+    width: 100px;
+    height: 100px;
 }
 
 /* ----- MAIN ----- */
