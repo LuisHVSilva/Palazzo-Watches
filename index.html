@@ -101,27 +101,62 @@
                     <a href="">Ver relógio</a>
                 </div>
             </div>
-            
+
             <a href="" class="linkAll">
                 <button class="buttonAll">CONHEÇA TODOS OS MODELOS</button>
             </a>
 
         </section>
-        
+
         <section id="tempo">
             <p class="title">REIVENTE O TEMPO</p>
-            <img src="img/linha-tempo.svg" alt="">            
-        </section>        
-        <section id="contato">
-            <p>Alguma dúvida?</p>
-            <p>Fale conosco</p>
-            <section>
-                
-            </section>
+            <img src="img/linha-tempo.svg" alt="">
         </section>
-        <section id="newsLetter"></section>
+        <section id="contato">
+            <section id="card">
+                <div class="left">
+                    <p class="title">Alguma dúvida?</p>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" id="name" required placeholder="Nome: ">
+                        <input type="email" name="email" id="email" required placeholder="E-mail:">
+                        <input type="tel" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX">
+                        <input type="text" name="motivo" id="motivo" required
+                            placeholder="Descreva em poucas palavras o motivo aqui.">
+                        <textarea type="text" name="mensagem" id="mensagem" required placeholder="Mensagem">
+                        </textarea>
+                        <button type="submit">ENVIAR</button>
+                    </form>
+                </div>
+
+                <div class="right">
+                    <div class="newsLetter">
+                        <p class="title">Seja o primeiro a saber de tudo</p>
+                        <form action="#" method="POST">
+                            <input type="text" name="name" id="name" placeholder="Nome: ">
+                            <input type="email" name="email" id="email" placeholder="E-mail: ">
+                            <button type="submit">ASSINAR</button>
+                        </form>
+                    </div>
+
+                    <div class="fastContact">
+                        <p class="title">Entre em contato de forma mais rápida</p>
+                        <a href=""><img src="img/Instagram.svg" alt="instagram-logo" id="instagram"></a>
+                        <a href=""><img src="img/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
+                    </div>
+
+                    <div class="social">
+                        <p class="title">Não deixe de nos seguir</p>
+                        <a href=""><img src="img/Instagram.svg" alt="instagram-logo"></a>
+                    </div>
+
+                    <small>&reg; No mercado há 2 anos prezando pela sua qualidade e conforto.</small>
+                </div>
+            </section>
+        </section>        
     </main>
-    <footer></footer>
+    <footer>
+        
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -141,6 +176,28 @@
                     }
                 }
             });
+        });
+    </script>
+
+    <script>
+        const instagram = document.getElementById("instagram");
+
+        instagram.addEventListener("mouseover", function () {
+            this.src = "img/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
+        });
+
+        instagram.addEventListener("mouseout", function () {
+            this.src = "img/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
+        });
+
+        const whatss = document.getElementById("whatssapp");
+
+        whatss.addEventListener("mouseover", function () {
+            this.src = "img/whatss-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
+        });
+
+        whatss.addEventListener("mouseout", function () {
+            this.src = "img/Whatss.svg"; /* Restaura a primeira imagem ao retirar o mouse */
         });
     </script>
 

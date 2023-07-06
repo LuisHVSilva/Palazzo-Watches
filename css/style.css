@@ -227,6 +227,7 @@ main #vitrine .title {
 /* ----- MAIN: VITRINE ----- */
 main #vitrine .owl-carousel .item {
     padding: 30%;
+    padding-bottom: 10%;
     padding-left: 0;
     text-align: center;
 
@@ -262,16 +263,16 @@ main #vitrine a.linkAll {
     color: white;
 }
 
-main #vitrine a.linkAll button.buttonAll{
+main #vitrine a.linkAll button.buttonAll {
     background: var(--color-primary-0);
     color: white;
     border: none;
-    padding: 1.5% 3%;     
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4); /* Adiciona a sombra */
+    padding: 1.5% 3%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);    
 }
 
-main #vitrine a.linkAll button.buttonAll:hover{
-    background: var(--color-primary);    
+main #vitrine a.linkAll button.buttonAll:hover {
+    background: var(--color-primary);
 }
 
 /* ----- MAIN:TEMPO ----- */
@@ -279,7 +280,7 @@ main section#tempo {
     margin-top: 4%;
     background-color: black;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover;
     padding: 5% 5%;
 
     display: flex;
@@ -287,18 +288,160 @@ main section#tempo {
     flex-direction: column;
 }
 
-main section#tempo p{
+main section#tempo p {
     margin-bottom: 7%;
 
-    font-size: 2em;    
-    font-weight: 700;    
+    font-size: 2em;
+    font-weight: 700;
     color: var(--color-primary-1);
-    
+
 }
 
-main section#tempo p, main section#tempo img{
+main section#tempo p,
+main section#tempo img {
     background-color: transparent;
     text-align: center;
     width: 100%;
 }
+
+/* ----- MAIN:CONTATO -----*/
+
+main section#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 3% 0;
+    background-color: var(--color-primary);
+    padding: 2% 5%;
+}
+
+main section#contato #card {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    width: 70%;
+    padding: 3% 7%;    
+}
+
+main section#contato .left {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+main section#contato .left .title {
+    color: var(--color-primary-0);
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+main section#contato .left form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 90%;
+}
+
+main section#contato .left form input {
+    width: 100%;
+    padding: 2% 0;
+    margin-top: 3%;
+    border: none;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+main section#contato .left form textarea#mensagem {
+    width: 100%;
+    height: 100px;
+    padding: 2% 2%;
+    margin: 3% 0;
+    vertical-align: top;
+    word-wrap: break-word;
+    border: none;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+main section#contato .left form input:focus,
+main section#contato .left form textarea#mensagem:focus {
+    border-bottom: 2px solid var(--color-primary-1);
+    outline: none;
+    /* Remove a borda de foco padrão do navegador */
+}
+
+main section#contato .left form button {
+    margin-top: 3%;
+    padding: 1% 5%;
+
+    border: none;
+    background-color: var(--color-primary-0);
+
+    font-size: 1.1em;
+    color: white;
+}
+
+main section#contato .left form button:hover {
+    background-color: var(--color-primary);
+}
+
+
+main section#contato .right .newsLetter {
+    margin-bottom: 10%;
+}
+
+main section#contato .right .newsLetter .title {
+    font-size: 2em;
+    margin-bottom: 4%;
+    color: var(--color-primary);
+}
+
+main section#contato .right .newsLetter form {
+    width: 100%;
+}
+
+main section#contato .right .newsLetter form input {
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    width: 34%;
+    padding: 1.5% 0;
+    margin-right: 2%;
+}
+
+main section#contato .right .newsLetter form button {
+    padding: 1% 2%;
+    margin-right: 2%;
+
+    border: none;
+    background-color: var(--color-primary-0);
+
+    font-size: 1.1em;
+    color: white;
+}
+
+main section#contato .right .newsLetter form button:hover {
+    background-color: var(--color-primary);
+}
+
+main section#contato .right .fastContact p.title,
+main section#contato .right .social p.title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 4%;
+    color: var(--color-primary);
+}
+
+main section#contato .right .fastContact img {
+    width: 8%;
+    margin-bottom: 10%;
+    margin-left: 25%;
+}
+
+main section#contato .right .social img {
+    width: 8%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
 
