@@ -1,0 +1,120 @@
+<!--Formulário inicial com envio de email apagado. -->
+
+<!--CSS-->
+
+
+main section#contato .left form button {
+    margin-top: 3%;
+    padding: 1% 5%;
+
+    border: none;
+    background-color: var(--color-primary-0);
+
+    font-size: 1.1em;
+    color: white;
+}
+
+main section#contato .left form button:hover {
+    background-color: var(--color-primary);
+}
+
+
+main section#contato .right .newsLetter {
+    margin-bottom: 10%;
+}
+
+main section#contato .right .newsLetter .title {
+    font-size: 2em;
+    margin-bottom: 4%;
+    color: var(--color-primary);
+}
+
+main section#contato .right .newsLetter form {
+    width: 100%;
+}
+
+main section#contato .right .newsLetter form input {
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    width: 34%;
+    padding: 1.5% 0;
+    margin-right: 2%;
+}
+
+main section#contato .right .newsLetter form button {
+    padding: 1% 2%;
+    margin-right: 2%;
+
+    border: none;
+    background-color: var(--color-primary-0);
+
+    font-size: 1.1em;
+    color: white;
+}
+
+main section#contato .right .newsLetter form button:hover {
+    background-color: var(--color-primary);
+}
+
+main section#contato .right .fastContact p.title,
+main section#contato .right .social p.title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 4%;
+    color: var(--color-primary);
+}
+
+main section#contato .right .fastContact img {
+    width: 8%;
+    margin-bottom: 10%;
+    margin-left: 25%;
+}
+
+main section#contato .right .social img {
+    width: 8%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+<!--HTML-->
+<section id="contato">
+    <section id="card">
+        <div class="left">
+            <p class="title">Alguma dúvida?</p>
+            <form action="#" method="POST">
+                <input type="text" name="name" id="name" required placeholder="Nome: ">
+                <input type="email" name="email" id="email" required placeholder="E-mail:">
+                <input type="tel" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX">
+                <input type="text" name="motivo" id="motivo" required
+                    placeholder="Descreva em poucas palavras o motivo aqui.">
+                <textarea type="text" name="mensagem" id="mensagem" required placeholder="Mensagem">
+                </textarea>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <div class="newsLetter">
+                <p class="title">Seja o primeiro a saber de tudo</p>
+                <form action="#" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Nome: ">
+                    <input type="email" name="email" id="email" placeholder="E-mail: ">
+                    <button type="submit">ASSINAR</button>
+                </form>
+            </div>
+
+            <div class="fastContact">
+                <p class="title">Entre em contato de forma mais rápida</p>
+                <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
+                <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
+            </div>
+
+            <div class="social">
+                <p class="title">Não deixe de nos seguir</p>
+                <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo"></a>
+            </div>
+
+            <small>&reg; No mercado há 2 anos prezando pela sua qualidade e conforto.</small>
+        </div>
+    </section>
+</section>

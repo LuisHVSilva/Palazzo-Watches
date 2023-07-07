@@ -9,6 +9,12 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
 
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="js/script.js"></script>
+
     <!--Owl carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -16,55 +22,62 @@
 </head>
 
 <body>
-    <header>
-        <nav class="background-color">
-            <div class="logo_header background-color">
-                <a href="index.html" class="logo background-color">
-                    <img src="img/Logo.svg" alt="" class="background-color">
+    <header class="background-color">
+        <nav>
+            <div class="logoHeader">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="logo">
                 </a>
                 <button class="navbar_toggle">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-
-            <ul class="main_nav background-color">
-                <li class="background-color">
-                    <a href="#" class="nav_links background-color">HOME</a>
+            
+            <ul class="main_nav ">
+                <li class="">
+                    <a href="#" class="nav_links">HOME</a>
                 </li>
-                <li class="background-color">
-                    <a href="#" class="nav_links background-color">CATÁLOGO</a>
+                <li class="">
+                    <a href="#" class="nav_links">CATÁLOGO</a>
                 </li>
-                <li class="background-color">
-                    <a href="#" class="nav_links background-color">SOBRE</a>
+                <li class="">
+                    <a href="#" class="nav_links">SOBRE</a>
                 </li>
-                <li class="background-color">
-                    <a href="#" class="nav_links background-color">CONTATO</a>
+                <li class="">
+                    <a href="#" class="nav_links">CONTATO</a>
                 </li>
             </ul>
+            
         </nav>
-        
-        <section class="banner background-color">
-            <div class="texto">
-                <p id="bannerTitle" class="title">O tempo ao seu lado com elegância</p>
-                <p id="bannerText" class="description"></p>
-                <div class="buttons">
-                    <a href="#"><button>Compre agora</button></a>
-                    <div class="bannerButton">
 
-                        <button id="leftButton" onclick="bannerChageLess()"><img src="img/icons/seta-esquerda.svg" alt=""></button>
-                        <button id="rightButton" onclick="bannerChagePlus()"><img src="img/icons/seta-direita.svg" alt=""></button>
+        <section id="banner" class="background-color">
+
+            
+            <img class="" id="bannerImg">
+
+
+            <div id="text" class="background-color">
+                <p id="bannerBrand" class="first"></p>
+                <p id="bannerText" class="description"></p>
+
+                <div class="right">
+                    <div class="buttons background-color">
+                        <a href="#"><button>Compre agora</button></a>
+                    </div>
+
+                    <div class="bannerButton background-color">
+                        <button id="leftButton" onclick="bannerChageLess()"><img src="img/icons/seta-esquerda.svg"
+                                alt=""></button>
+                        <button id="rightButton" onclick="bannerChagePlus()"><img src="img/icons/seta-direita.svg"
+                                alt=""></button>
                     </div>
                 </div>
+            
             </div>
         </section>
-        <div id="bannerImage" class="background-color">
-            <img class="background-color" id="bannerImg">
 
-            <p id="bannerBrand" class="first"></p>
-            <p id="bannerModel" class="last"></p>
-        </div>
     </header>
-
+    
     <main>
         <section id="vitrine">
             <p class="title">RECONSTRUA O TEMPO A SEU ESTILO</p>
@@ -106,52 +119,12 @@
             <p class="title">REIVENTE O TEMPO</p>
             <img src="img/icons/linha-tempo.svg" alt="">
         </section>
-        <section id="contato">
-            <section id="card">
-                <div class="left">
-                    <p class="title">Alguma dúvida?</p>
-                    <form action="#" method="POST">
-                        <input type="text" name="name" id="name" required placeholder="Nome: ">
-                        <input type="email" name="email" id="email" required placeholder="E-mail:">
-                        <input type="tel" name="phone" id="phone" placeholder="(XX) XXXXX-XXXX">
-                        <input type="text" name="motivo" id="motivo" required
-                            placeholder="Descreva em poucas palavras o motivo aqui.">
-                        <textarea type="text" name="mensagem" id="mensagem" required placeholder="Mensagem">
-                        </textarea>
-                        <button type="submit">ENVIAR</button>
-                    </form>
-                </div>
 
-                <div class="right">
-                    <div class="newsLetter">
-                        <p class="title">Seja o primeiro a saber de tudo</p>
-                        <form action="#" method="POST">
-                            <input type="text" name="name" id="name" placeholder="Nome: ">
-                            <input type="email" name="email" id="email" placeholder="E-mail: ">
-                            <button type="submit">ASSINAR</button>
-                        </form>
-                    </div>
-
-                    <div class="fastContact">
-                        <p class="title">Entre em contato de forma mais rápida</p>
-                        <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
-                        <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
-                    </div>
-
-                    <div class="social">
-                        <p class="title">Não deixe de nos seguir</p>
-                        <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo"></a>
-                    </div>
-
-                    <small>&reg; No mercado há 2 anos prezando pela sua qualidade e conforto.</small>
-                </div>
-            </section>
-        </section>
     </main>
     <footer>
 
     </footer>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
@@ -163,7 +136,7 @@
                 nav: true, // Exibir botões de navegação
                 responsive: {
                     0: {
-                        items: 1 // Número de itens visíveis no carousel em telas menores
+                        items: 2 // Número de itens visíveis no carousel em telas menores
                     },
                     768: {
                         items: 4 // Número de itens visíveis no carousel em telas maiores
@@ -177,25 +150,26 @@
         const instagram = document.getElementById("instagram");
 
         instagram.addEventListener("mouseover", function () {
-            this.src = "img/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
+            this.src = "img/icons/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
         });
 
         instagram.addEventListener("mouseout", function () {
-            this.src = "img/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
+            this.src = "img/icons/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
         });
 
         const whatss = document.getElementById("whatssapp");
 
         whatss.addEventListener("mouseover", function () {
-            this.src = "img/whatss-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
+            this.src = "img/icons/whatss-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
         });
 
         whatss.addEventListener("mouseout", function () {
-            this.src = "img/Whatss.svg"; /* Restaura a primeira imagem ao retirar o mouse */
+            this.src = "img/icons/Whatss.svg"; /* Restaura a primeira imagem ao retirar o mouse */
         });
     </script>
 
-    <!--Banner JS-->
+    <!--JS-->
+    <script src="js/endscript.js"></script>
     <script src="js/banner.js"></script>
 </body>
 

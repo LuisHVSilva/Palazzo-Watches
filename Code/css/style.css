@@ -7,15 +7,15 @@
 }
 
 :root {
-    --color-primary-1: #AAE2FA;
-    --color-primary-0: #67889B;
-    --color-primary: #465C69;
-    --color-secondary-1: #FFFFFF;
-    --color-secondary-0: #FFFFFF;
-    --color-secondary: #E6E6E6;
-    --color-tertiary-1: #1A1A1A;
-    --color-tertiary-0: #000000;
-    --color-tertiary: #000000;
+    --color-primary-1: #E5A254;
+    --color-primary-0: #EBC673;
+    --color-primary: #9A5629;
+    --color-secondary-1: #193429;
+    --color-secondary-0: #234437;
+    --color-secondary: #0B2218;
+    --color-tertiary-1: #E9C8A2;
+    --color-tertiary-0: #C0B09F;
+    --color-tertiary: #CCC0B6;
 
     --font-family-normal: Arial, Helvetica, sans-serif;
     --font-family-title: 'Times New Roman', Times, serif;
@@ -28,34 +28,31 @@
 }
 
 .background-color {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-0);
 }
 
 /* HEADER */
 
-header section.banner .texto,
-header section.banner p,
-header section.banner .buttons,
-header section.banner .buttons .bannerButton {
+nav,
+header div,
+header a,
+header ul,
+header li,
+header section,
+header p,
+header img {
     background-color: transparent;
 }
 
 header {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: 30% 100%;
+    display: flex;
     justify-content: center;
-    border: 4px solid red;    
+    flex-direction: column;
 }
 
 /* ----- HEADER:NAV ----- */
 
 header nav {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,7 +60,16 @@ header nav {
 
     border-bottom: 2px solid;
 
-    border-image: linear-gradient(to right, rgba(170, 226, 250, 0.3), rgba(255, 255, 255, 0.3)) 1;
+    border-image: linear-gradient(to right, rgba(170, 226, 250, 0.3), rgba(154, 86, 41, 1), rgba(154, 86, 41, 0.2)) 0.4;
+    background-color: var(--color-primary);
+}
+
+header nav div.logoHeader a img {
+    width: 15%;
+}
+
+header nav div.logoHeader button {
+    display: none;
 }
 
 header nav .main_nav {
@@ -77,54 +83,65 @@ header nav .main_nav {
 
 header nav .main_nav li {
     display: inline;
-    color: #ffffff;
 }
 
 header nav .main_nav li a {
     text-decoration: none;
     font-family: var(--font-family-title);
-    color: var(--color-secondary-0);
+    color: var(--color-secondary);
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 header nav .main_nav li a:hover {
-    color: var(--color-primary-1)
+    color: var(--color-primary-1);
 }
 
 /* ----- HEADER:BANNER ----- */
 
-header .banner {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-
-    padding: 0 10%;
+header #banner {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 
-
-    background-image: url('../img/relogio-banner.svg');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: auto 70%;
+    padding: 2%;
 }
 
-header .banner .title {
-    margin-bottom: 3%;
-    color: var(--color-primary-1)
+header #banner #bannerImg {
+    width: 200px;
+    height: 300px;
 }
 
-header .banner .description {
+header #banner #text {
+    width: 50%;
+}
+
+header #banner #text p#bannerBrand {
+    margin: 4% 0;
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--color-primary)
+}
+
+header #banner #text p#bannerText {
+    margin: 4% 0;
+
     width: 75%;
     text-align: justify;
 
     line-height: 150%;
-    color: var(--color-secondary-0)
+    color: var(--color-secondary);
+
+    height: 100px;
 }
 
-header .banner .buttons {
+header #banner #text div.right {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+header #banner #text div.right div.buttons {
     margin-top: 2%;
     display: flex;
     align-items: center;
@@ -132,11 +149,11 @@ header .banner .buttons {
     width: 100%;
 }
 
-header .banner .buttons a {
+header #banner #text div.right div.buttons a {
     width: 20%;
 }
 
-header .banner .buttons button {
+header #banner #text div.right div.buttons button {
     padding: 5% 5%;
     font-weight: 700;
     font-size: 1.2em;
@@ -144,76 +161,32 @@ header .banner .buttons button {
     border: none;
 }
 
-header .banner .buttons .bannerButton {
+header #banner #text div.right div.buttons button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+header #banner #text div.right .bannerButton {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 15%;
+    margin-top: 10px;
 }
 
-header .banner .buttons .bannerButton button {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-header .banner .buttons .bannerButton button img {
+header #banner #text div.right .bannerButton button {
+    border: none;
+    padding: 3% 3%;
     background-color: transparent;
-    margin: 0 auto;
 }
 
-
-header .banner .buttons button:hover {
+header #banner #text div.right .bannerButton button:hover {
     background-color: var(--color-primary-1);
 }
 
-/* ----- HEADER:BANNERIMAGE ----- */
-
-header #bannerImage {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    display: flex;
-    align-items: center;
-    justify-content: end;
-
-    background-image: url('../img/background-banner.svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: auto 110%;
-    height: 416px;
-}
-
-
-header #bannerImage p {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    background-color: transparent;
-}
-
-header #bannerImage p.first {
-    margin: 0 3%;
-    font-weight: 700;
-    font-size: 2em;    
-}
-
-header #bannerImage p.last {
-    margin-right: 10%;
-    font-weight: 700;
-    font-size: 2em;    
-}
-
-header #bannerImage img {
-    background-color: transparent;
-    width: 100px;
-    height: 100px;
-}
 
 /* ----- MAIN ----- */
+
 main {
     margin-top: 10%;
 }
@@ -223,7 +196,7 @@ main #vitrine {
 }
 
 main #vitrine .title {
-    color: var(--color-primary-0);
+    color: var(--color-primary);
     font-size: 2em;
 }
 
@@ -262,20 +235,18 @@ main #vitrine .owl-nav {
     display: none;
 }
 
-main #vitrine a.linkAll {
-    color: white;
-}
-
 main #vitrine a.linkAll button.buttonAll {
     background: var(--color-primary-0);
-    color: white;
+    color: var(--color-secondary);
+    font-weight: 700;
     border: none;
     padding: 1.5% 3%;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);    
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 main #vitrine a.linkAll button.buttonAll:hover {
     background: var(--color-primary);
+    color: var(--color-primary-0);
 }
 
 /* ----- MAIN:TEMPO ----- */
@@ -325,7 +296,7 @@ main section#contato #card {
     grid-template-columns: 50% 50%;
 
     width: 70%;
-    padding: 3% 7%;    
+    padding: 3% 7%;
 }
 
 main section#contato .left {
@@ -373,78 +344,3 @@ main section#contato .left form textarea#mensagem:focus {
     outline: none;
     /* Remove a borda de foco padrão do navegador */
 }
-
-main section#contato .left form button {
-    margin-top: 3%;
-    padding: 1% 5%;
-
-    border: none;
-    background-color: var(--color-primary-0);
-
-    font-size: 1.1em;
-    color: white;
-}
-
-main section#contato .left form button:hover {
-    background-color: var(--color-primary);
-}
-
-
-main section#contato .right .newsLetter {
-    margin-bottom: 10%;
-}
-
-main section#contato .right .newsLetter .title {
-    font-size: 2em;
-    margin-bottom: 4%;
-    color: var(--color-primary);
-}
-
-main section#contato .right .newsLetter form {
-    width: 100%;
-}
-
-main section#contato .right .newsLetter form input {
-    border: none;
-    border-bottom: 1px solid var(--color-primary);
-    width: 34%;
-    padding: 1.5% 0;
-    margin-right: 2%;
-}
-
-main section#contato .right .newsLetter form button {
-    padding: 1% 2%;
-    margin-right: 2%;
-
-    border: none;
-    background-color: var(--color-primary-0);
-
-    font-size: 1.1em;
-    color: white;
-}
-
-main section#contato .right .newsLetter form button:hover {
-    background-color: var(--color-primary);
-}
-
-main section#contato .right .fastContact p.title,
-main section#contato .right .social p.title {
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 4%;
-    color: var(--color-primary);
-}
-
-main section#contato .right .fastContact img {
-    width: 8%;
-    margin-bottom: 10%;
-    margin-left: 25%;
-}
-
-main section#contato .right .social img {
-    width: 8%;
-    margin-left: 10%;
-    margin-bottom: 10%;
-}
-
-
