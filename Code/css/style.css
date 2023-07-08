@@ -21,6 +21,14 @@
     --font-family-title: 'Times New Roman', Times, serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
 .title {
     font-size: 3em;
     font-family: var(--font-family-title);
@@ -64,12 +72,13 @@ header nav {
     background-color: var(--color-primary);
 }
 
-header nav div.logoHeader a img {
-    width: 15%;
+header nav .logoHeader a img {
+    width: 15%;    
 }
 
-header nav div.logoHeader button {
+header nav .logoHeader button {
     display: none;
+    
 }
 
 header nav .main_nav {
@@ -185,7 +194,7 @@ header #banner #text div.right .bannerButton button:hover {
 }
 
 
-/* ----- MAIN ----- */
+/* ***** MAIN ***** */
 
 main {
     margin-top: 10%;
@@ -201,6 +210,7 @@ main #vitrine .title {
 }
 
 /* ----- MAIN: VITRINE ----- */
+
 main #vitrine .owl-carousel .item {
     padding: 30%;
     padding-bottom: 10%;
@@ -240,8 +250,7 @@ main #vitrine a.linkAll button.buttonAll {
     color: var(--color-secondary);
     font-weight: 700;
     border: none;
-    padding: 1.5% 3%;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+    padding: 1.5% 3%;    
 }
 
 main #vitrine a.linkAll button.buttonAll:hover {
@@ -250,6 +259,7 @@ main #vitrine a.linkAll button.buttonAll:hover {
 }
 
 /* ----- MAIN:TEMPO ----- */
+
 main section#tempo {
     margin-top: 4%;
     background-color: black;
@@ -343,4 +353,136 @@ main section#contato .left form textarea#mensagem:focus {
     border-bottom: 2px solid var(--color-primary-1);
     outline: none;
     /* Remove a borda de foco padrão do navegador */
+}
+
+/**/
+@media (max-width: 1000px) {
+
+    main {
+        padding: 0%;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .title {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    form label {
+        font-size: 0.8em;
+    }
+    
+    /* ----- HEADER:NAV ----- */
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 3%;
+    }
+
+    header nav .logoHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav .logoHeader button {
+        display: block;
+        width: 20%;
+
+        font-size: 200%;        
+        background-color: transparent;
+        border-color: transparent;
+        transition: all 0.3s linear;
+        cursor: pointer;
+    }    
+
+    header nav .logoHeader button i {
+        background-color: transparent;
+        color: var(--color-primary-0);
+    }
+
+    header nav .main_nav {
+        display: none;
+    }
+
+    header nav ul {
+        padding-left: 10%;
+    }
+
+    header nav li {
+        width: 100vw;
+        font-size: 1em;
+        text-align: justify;
+        margin-top: 5%;
+    }
+
+    header nav li a {
+        color: var(--color-secondary);
+        font-weight: 700;
+    }    
+
+
+    /* ----- HEADER:BANNER ----- */
+    header #banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 10% 6%;
+    }
+
+    header #banner #text {        
+        width: 100%;
+        text-align: center;
+    }
+
+    header #banner #text p#bannerText {
+        width: 100%;
+        text-align: justify;     
+    }    
+
+    header #banner #text div.right div.buttons {
+        margin: 20% 0 10% 0;
+    }
+
+    header #banner #text div.right div.buttons a {
+        width: 50%;
+    }
+
+    header #banner #text div.right div.buttons button {
+        padding: 4% 10%;
+    }
+
+    header #banner #text div.right .bannerButton {     
+        width: 34%;     
+        margin-bottom: 10%;   
+    }
+
+    /* ----- MAIN: VITRINE ----- */
+    main #vitrine{
+        margin-bottom: 10%;
+    }
+
+
+    main #vitrine .productName {
+        margin-top: 10%;
+        margin-bottom: 4%;        
+        font-size: 1em;
+    }
+
+    main #vitrine a.linkAll button.buttonAll {
+        background: var(--color-primary-0);
+        color: var(--color-secondary);
+        font-weight: 700;
+        border: none;
+        padding: 1.5% 5%;
+    }
 }
