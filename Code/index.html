@@ -32,7 +32,7 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-    
+
             <ul class="main_nav ">
                 <li class="">
                     <a href="#" class="nav_links">HOME</a>
@@ -47,18 +47,18 @@
                     <a href="#" class="nav_links">CONTATO</a>
                 </li>
             </ul>
-        </nav>        
+        </nav>
 
         <section id="banner" class="background-color">
 
-            
+
             <img class="" id="bannerImg">
 
 
             <div id="text" class="background-color">
                 <p id="bannerBrand" class="first"></p>
                 <p id="bannerText" class="description"></p>
-                
+
                 <div class="right">
                     <div class="buttons background-color">
                         <a href="#"><button>Compre agora</button></a>
@@ -71,7 +71,7 @@
                                 alt=""></button>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
@@ -119,6 +119,22 @@
             <img src="img/icons/linha-tempo.svg" alt="">
         </section>
 
+        <section id="contato">
+            <div id="card">
+
+                <p class="title">SIGA A GENTE</p>
+                <p>Fique por dentro das novidades em primeira mão e esteja em contato com nossos atendentes.</p>
+                
+                <div class="fastContact">
+                    <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
+                    <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
+                </div>                
+
+                <small>&reg; No mercado há 2 anos prezando pela sua qualidade e conforto.</small>
+
+            </div>
+        </section>
+
     </main>
     <footer>
 
@@ -164,6 +180,16 @@
 
         whatss.addEventListener("mouseout", function () {
             this.src = "img/icons/Whatss.svg"; /* Restaura a primeira imagem ao retirar o mouse */
+        });
+
+        const socialInstagram = document.getElementById("socialInstagram");
+
+        socialInstagram.addEventListener("mouseover", function () {
+            this.src = "img/icons/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
+        });
+
+        socialInstagram.addEventListener("mouseout", function () {
+            this.src = "img/icons/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
         });
     </script>
 
