@@ -16,6 +16,7 @@
     --color-tertiary-1: #E9C8A2;
     --color-tertiary-0: #C0B09F;
     --color-tertiary: #CCC0B6;
+    --color-contrast: #183429;
 
     --font-family-normal: Arial, Helvetica, sans-serif;
     --font-family-title: 'Times New Roman', Times, serif;
@@ -245,12 +246,12 @@ main #vitrine .owl-nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    text-align: center;    
-    
-    font-size: 200%;    
+    text-align: center;
+
+    font-size: 200%;
     width: 5%;
-    margin: 0 auto;    
-    
+    margin: 0 auto;
+
 }
 
 main #vitrine a.linkAll button.buttonAll {
@@ -269,11 +270,8 @@ main #vitrine a.linkAll button.buttonAll:hover {
 /* ----- MAIN:TEMPO ----- */
 
 main section#tempo {
-    margin-top: 4%;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5% 5%;
+    margin: 4% 0;
+    padding: 3% 3%;
 
     display: flex;
     align-items: center;
@@ -283,7 +281,7 @@ main section#tempo {
 main section#tempo p {
     margin-bottom: 7%;
 
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 700;
     color: var(--color-primary-1);
 
@@ -299,30 +297,39 @@ main section#tempo img {
 /* ----- MAIN:CONTATO -----*/
 
 main section#contato {
-    margin: 7% 0;
-    padding: 5%;
-    background-color: var(--color-primary);
-}
-
-main section#contato #card {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1%;
+
+    margin-top: 1%;
+    margin-bottom: 2%;
+    padding: 0 5%;
+
     text-align: center;
+    background-color: var(--color-primary);
 }
 
-main section#contato #card p.title {
-
-    margin: 1%;
+main section#contato p,
+main section#contato span,
+main section#contato small,
+main section#contato .fastContact,
+main section#contato .fastContact a,
+main section#contato .fastContact a img {
+    background-color: transparent;
 }
 
-main section#contato #card .title {
-    color: var(--color-primary);
+main section#contato p.title {
+    color: var(--color-primary-0);
+    margin-top: 5%;
+    margin-bottom: 2%;
 }
 
-main section#contato #card .fastContact {
+main section#contato {
+    color: white;
+}
+
+main section#contato .fastContact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,15 +337,80 @@ main section#contato #card .fastContact {
     margin: 2%;
 }
 
-main section#contato #card .fastContact a {
-    text-align: center;
-}
-
-main section#contato #card .fastContact a img {
+main section#contato .fastContact a img {
     width: 50%;
 }
 
-@media (max-width: 1000px) {
+main section#contato span {
+    margin-top: 2%;
+    margin-bottom: 5%;
+
+    font-weight: 700;
+    color: var(--color-primary-0);
+}
+
+/* ***** FOOTER ***** */
+
+footer {
+    background-color: var(--color-contrast);
+
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+
+    padding: 2%;
+}
+
+footer section,
+footer div,
+footer ul,
+footer li,
+footer a,
+footer img,
+footer p {
+    background-color: transparent;
+    color: var(--color-tertiary-1);
+}
+
+footer .title {
+    font-size: 1.5em;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+footer section#footerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 10%;
+}
+
+footer section#footerLogo img {
+    width: 60%;
+}
+
+footer section#footerMenu a:hover {
+    color: var(--color-primary-1);
+}
+
+footer section#footerSocial #img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer section#footerSocial #img a {
+    text-align: center;
+}
+
+footer section#footerSocial #img img {
+    width: 50%;
+}
+
+/* ***** RESPONSIVE ***** */
+
+@media (max-width: 1200px) {
 
     main {
         padding: 0%;
@@ -473,38 +545,76 @@ main section#contato #card .fastContact a img {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        text-align: center;    
-        
-        font-size: 200%;    
+        text-align: center;
+
+        font-size: 200%;
         width: 25%;
-        margin: 0 auto;    
-        
+        margin: 0 auto;
+
     }
+
+    /* ----- MAIN:TEMPO ----- */
+
+    main section#tempo {
+        margin: 20% 0;
+    }
+
+    main section#tempo p {
+        font-size: 1.5em;
+    }
+
 
     /* ----- MAIN:CONTATO -----*/
 
-    main section#contato {        
-        background-color: transparent;
-    }
-
-    main section#contato #card {
+    main section#contato {
         border: 1px solid var(--color-primary);
     }
 
-    main section#contato #card p {
+    main section#contato p {
         font-size: 0.8em;
     }
 
-    main section#contato #card p.title {
+    main section#contato p.title {
         font-size: 2em;
-        margin: 5%;
-    }    
-
-    main section#contato #card .fastContact {    
         margin: 5%;
     }
 
-    main section#contato #card small {
+    main section#contato .fastContact {
+        margin: 5%;
+    }
+
+    main section#contato small {
         font-size: 0.7em;
+    }
+
+    /* ***** FOOTER ***** */
+
+
+    footer {
+        background-color: var(--color-contrast);
+
+        display: flex;
+        align-items: top;
+        justify-content: center;
+
+        padding: 2%;
+    }
+
+    footer .title {
+        font-size: 1em;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+
+    footer section#footerLogo, footer section#footerMenu {
+        display: none;
+    }    
+
+    footer section#footerPayment img, footer section#footerDelivery img {
+        width: 70%;
+    }
+
+    footer section#footerSocial #img img {
+        width: 30%;
     }
 }
