@@ -54,9 +54,11 @@ header img {
 }
 
 header {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 15% 80% 5%;
+    justify-content: top;
     flex-direction: column;
+    height: 100vh;
 }
 
 /* ----- HEADER:NAV ----- */
@@ -83,24 +85,25 @@ header nav .logoHeader button {
 }
 
 header nav .main_nav {
-    display: flex;
-    justify-content: space-between;
-
-    width: 60%;
+    display: flex;    
+    align-items: end;  
+    justify-content: space-evenly;  
 
     list-style: none;
+
+    width: 25%;
 }
 
 header nav .main_nav li {
-    display: inline;
+    display: inline;            
 }
 
 header nav .main_nav li a {
     text-decoration: none;
     font-family: var(--font-family-title);
-    color: var(--color-secondary);
+    color: var(--color-primary-0);
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 0.8em;    
 }
 
 header nav .main_nav li a:hover {
@@ -112,9 +115,7 @@ header nav .main_nav li a:hover {
 header #banner {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-
-    padding: 2%;
+    justify-content: space-evenly;    
 }
 
 header #banner #bannerImg {
@@ -126,10 +127,9 @@ header #banner #text {
     width: 50%;
 }
 
-header #banner #text p#bannerBrand {
-    margin: 4% 0;
+header #banner #text p#bannerBrand {    
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.5em;
     color: var(--color-primary)
 }
 
@@ -140,57 +140,50 @@ header #banner #text p#bannerText {
     text-align: justify;
 
     line-height: 150%;
-    color: var(--color-secondary);
-
-    height: 100px;
+    color: var(--color-secondary);  
+    
+    font-size: 0.8em;
 }
 
-header #banner #text div.right {
+header #banner #text div.bannerButton {
     display: flex;
     align-items: end;
     flex-direction: column;
+    margin-top: 10%;
+    width: 100%;    
 }
 
-header #banner #text div.right div.buttons {
-    margin-top: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+header #banner #text div.bannerButton .buyNow {    
+    align-self: flex-start;    
+    text-align: center;    
 }
 
-header #banner #text div.right div.buttons a {
-    width: 20%;
+header #banner #text div.bannerButton .buyNow button {      
+    padding: 10% 80%;
+    border: none;       
+    font-weight: 700
 }
 
-header #banner #text div.right div.buttons button {
-    padding: 5% 5%;
-    font-weight: 700;
-    font-size: 1.2em;
-    width: 100%;
-    border: none;
-}
-
-header #banner #text div.right div.buttons button:hover {
+header #banner #text div.bannerButton .buyNow button:hover {
     background-color: var(--color-primary);
     color: white;
 }
 
-header #banner #text div.right .bannerButton {
+/* ----- HEADER:BANNER-BUTTON ----- */
+
+header #navegateButtons {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 15%;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;            
 }
 
-header #banner #text div.right .bannerButton button {
+header #navegateButtons button {
     border: none;
-    padding: 3% 3%;
+    padding: 0% 3%;
     background-color: transparent;
 }
 
-header #banner #text div.right .bannerButton button:hover {
+header #navegateButtons button:hover {
     background-color: var(--color-primary-1);
 }
 
@@ -428,6 +421,15 @@ footer section#footerSocial #img img {
     form label {
         font-size: 0.8em;
     }
+
+    header {
+        display: flex;
+        
+        justify-content: top;
+        flex-direction: column;
+        height: 100vh;
+    }
+
 
     /* ----- HEADER:NAV ----- */
 
