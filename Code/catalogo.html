@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="js/script.js"></script>
+
+    <!--Owl carousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body id="catalogo">
+    <header class="background-color">
+        <nav>
+            <div class="logoHeader">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <button class="navbar_toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="main_nav ">
+                <li>
+                    <a href="index.html" class="nav_links">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="catalogo.html" class="nav_links">CATÁLOGO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="filter">
+            <button onclick="abrirFiltro()" class="filterButton">Filtro</button>
+
+            <div id="filtro-overlay" onclick="fecharFiltro()">
+                <div id="filtro-content" onclick="event.stopPropagation()">
+                    <p class="title">Filtro</p>
+                    <label>
+                        <input type="checkbox" id="checkbox-todos" onchange="selecionarTodos()">Todos
+                    </label>
+                    <label>
+                        <input type="checkbox" value="rolex" onchange="filtrar()">Rolex
+                    </label>
+                    <label>
+                        <input type="checkbox" value="tagHeuer" onchange="filtrar()">Tag Heuer
+                    </label>
+                    <label>
+                        <input type="checkbox" value="omega" onchange="filtrar()">Omega
+                    </label>
+                    <label>
+                        <input type="checkbox" value="breitling" onchange="filtrar()">Breitling
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <div id="itens">
+            <div class="item rolex">Rolex 1</div>
+            <div class="item rolex">Rolex 2</div>
+            <div class="item rolex">Rolex 3</div>
+            <div class="item rolex">Rolex 4</div>
+
+
+            <div class="item tagHeuer">tagHeuer 1</div>
+            <div class="item tagHeuer">tagHeuer 2</div>
+            <div class="item tagHeuer">tagHeuer 3</div>
+            <div class="item tagHeuer">tagHeuer 4</div>
+
+            <div class="item omega">Omega 1</div>
+            <div class="item omega">Omega 2</div>
+            <div class="item omega">Omega 3</div>
+            <div class="item omega">Omega 4</div>
+
+            <div class="item breitling">Breitling 1</div>
+            <div class="item breitling">Breitling 2</div>
+            <div class="item breitling">Breitling 3</div>
+            <div class="item breitling">Breitling 4</div>
+        </div>
+    </main>
+
+    <script src="js/filter.js"></script>
+</body>
