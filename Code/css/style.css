@@ -4,6 +4,8 @@
 
     margin: 0;
     padding: 0;
+
+    font-size: 16px;
 }
 
 :root {
@@ -31,9 +33,11 @@ ul {
 }
 
 .title {
-    font-size: 3em;
+    font-size: 1.5em;
     font-family: var(--font-family-title);
     font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
 }
 
 .background-color {
@@ -47,7 +51,7 @@ header div,
 header a,
 header ul,
 header li,
-header section,
+header,
 header p,
 header img {
     background-color: transparent;
@@ -85,9 +89,9 @@ header nav .logoHeader button {
 }
 
 header nav .main_nav {
-    display: flex;    
-    align-items: end;  
-    justify-content: space-evenly;  
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
 
     list-style: none;
 
@@ -95,7 +99,7 @@ header nav .main_nav {
 }
 
 header nav .main_nav li {
-    display: inline;            
+    display: inline;
 }
 
 header nav .main_nav li a {
@@ -103,7 +107,6 @@ header nav .main_nav li a {
     font-family: var(--font-family-title);
     color: var(--color-primary-0);
     font-weight: 700;
-    font-size: 0.8em;    
 }
 
 header nav .main_nav li a:hover {
@@ -115,19 +118,15 @@ header nav .main_nav li a:hover {
 header #banner {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;
 }
 
-header #banner #bannerImg {
-    width: 200px;
-    height: 300px;
-}
 
 header #banner #text {
     width: 50%;
 }
 
-header #banner #text p#bannerBrand {    
+header #banner #text p#bannerBrand {
     font-weight: 700;
     font-size: 1.5em;
     color: var(--color-primary)
@@ -140,8 +139,8 @@ header #banner #text p#bannerText {
     text-align: justify;
 
     line-height: 150%;
-    color: var(--color-secondary);  
-    
+    color: var(--color-secondary);
+
     font-size: 0.8em;
 }
 
@@ -150,17 +149,17 @@ header #banner #text div.bannerButton {
     align-items: end;
     flex-direction: column;
     margin-top: 10%;
-    width: 100%;    
+    width: 100%;
 }
 
-header #banner #text div.bannerButton .buyNow {    
-    align-self: flex-start;    
-    text-align: center;    
+header #banner #text div.bannerButton .buyNow {
+    align-self: flex-start;
+    text-align: center;
 }
 
-header #banner #text div.bannerButton .buyNow button {      
+header #banner #text div.bannerButton .buyNow button {
     padding: 10% 80%;
-    border: none;       
+    border: none;
     font-weight: 700
 }
 
@@ -174,7 +173,8 @@ header #banner #text div.bannerButton .buyNow button:hover {
 header #navegateButtons {
     display: flex;
     justify-content: center;
-    align-items: center;            
+    align-items: center;
+    margin-bottom: 2%;
 }
 
 header #navegateButtons button {
@@ -191,138 +191,178 @@ header #navegateButtons button:hover {
 /* ***** MAIN ***** */
 
 main {
-    margin-top: 10%;
+    margin-top: 5%;
 }
+
+/* ----- MAIN: VITRINE ----- */
+
+
 
 main #vitrine {
     padding: 0 5%;
 }
-
-main #vitrine .title {
-    color: var(--color-primary);
-    font-size: 2em;
-}
-
-/* ----- MAIN: VITRINE ----- */
 
 main #vitrine .owl-carousel .item {
     padding: 30%;
     padding-bottom: 10%;
     padding-left: 0;
     text-align: center;
-
 }
 
 main #vitrine .owl-carousel .item img {
     border-radius: 20px;
 }
 
-main #vitrine .owl-carousel .item a {
-    text-decoration: none;
-    color: var(--color-primary);
-    font-weight: 700;
-    font-size: 1.3em;
-}
-
-main #vitrine .owl-carousel .item a:hover {
-    color: var(--color-primary-0);
-}
-
 main #vitrine .productName {
-    margin-top: 8%;
-    margin-bottom: 2%;
-    font-weight: 700;
-    font-size: 1.3em;
-}
-
-main #vitrine .owl-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    margin-top: 12%;
+    font-weight: 500;
+    font-size: 0.8em;
     text-align: center;
-
-    font-size: 200%;
-    width: 5%;
-    margin: 0 auto;
-
 }
 
-main #vitrine a.linkAll button.buttonAll {
-    background: var(--color-primary-0);
+/* ----- MAIN:ALLHERE ----- */
+
+main #allHere {
+    margin-top: 10%;
+
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+main #allHere .left p.title {
+    text-align: start;
+}
+
+main #allHere .left p.text {
+    margin: 8% 0;
+
+    width: 75%;
+    text-align: justify;
+
+    line-height: 150%;
     color: var(--color-secondary);
-    font-weight: 700;
-    border: none;
-    padding: 1.5% 3%;
+
+    font-size: 0.8em;
 }
 
-main #vitrine a.linkAll button.buttonAll:hover {
-    background: var(--color-primary);
+main #allHere .left a {
+    color: var(--color-primary-1);
+    font-weight: 700;
+}
+
+main #allHere .left a:hover {
     color: var(--color-primary-0);
+}
+
+main #allHere .right img {
+    width: 120%;
 }
 
 /* ----- MAIN:TEMPO ----- */
 
-main section#tempo {
-    margin: 4% 0;
-    padding: 3% 3%;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-main section#tempo p {
-    margin-bottom: 7%;
-
-    font-size: 3em;
-    font-weight: 700;
-    color: var(--color-primary-1);
-
-}
-
-main section#tempo p,
-main section#tempo img {
+main #tempo p,
+main #tempo img {
     background-color: transparent;
     text-align: center;
     width: 100%;
 }
 
+main #tempo {
+    margin-top: 7%;
+    padding: 5% 3%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--color-secondary-0);
+}
+
+main #tempo p.title {
+    text-align: start;
+    margin-bottom: 3%;
+
+    font-weight: 700;
+    color: var(--color-primary-0);
+}
+
+/* ----- MAIN:PALAZZOWATHCES -----*/
+
+main #palazzoWatches {
+    margin-top: 7%;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: top;
+    justify-content: space-evenly;
+}
+
+main #palazzoWatches .right,
+main #palazzoWatches .left {
+    width: 100%;
+}
+
+main #palazzoWatches .right p.title {
+    padding-bottom: 4%;
+}
+
+main #palazzoWatches .right p.text {
+    padding: 3% 0;
+
+    text-align: justify;
+
+    line-height: 150%;
+    color: var(--color-secondary);
+
+    font-size: 0.8em;
+}
+
+main #palazzoWatches .left img {
+    width: 90%;
+}
+
+
 /* ----- MAIN:CONTATO -----*/
 
-main section#contato {
+main #contato p,
+main #contato span,
+main #contato small,
+main #contato .fastContact,
+main #contato .fastContact a,
+main #contato .fastContact a img {
+    background-color: transparent;
+}
+
+main #contato {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    margin-top: 1%;
+    margin-top: 7%;
     margin-bottom: 2%;
-    padding: 0 5%;
+
+    padding: 2% 5%;
 
     text-align: center;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-0)
 }
 
-main section#contato p,
-main section#contato span,
-main section#contato small,
-main section#contato .fastContact,
-main section#contato .fastContact a,
-main section#contato .fastContact a img {
-    background-color: transparent;
+main #contato p.text,
+main #contato span {
+    font-size: 0.8em;
 }
 
-main section#contato p.title {
-    color: var(--color-primary-0);
-    margin-top: 5%;
-    margin-bottom: 2%;
+main #contato p.title {
+    margin-bottom: 1%;
 }
 
-main section#contato {
-    color: white;
+main #contato {
+    color: var(--color-contrast);
 }
 
-main section#contato .fastContact {
+main #contato .fastContact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -330,30 +370,11 @@ main section#contato .fastContact {
     margin: 2%;
 }
 
-main section#contato .fastContact a img {
-    width: 50%;
-}
-
-main section#contato span {
-    margin-top: 2%;
-    margin-bottom: 5%;
-
-    font-weight: 700;
-    color: var(--color-primary-0);
+main #contato .fastContact a img {
+    width: 40%;
 }
 
 /* ***** FOOTER ***** */
-
-footer {
-    background-color: var(--color-contrast);
-
-    display: flex;
-    align-items: top;
-    justify-content: space-around;
-
-    padding: 2%;
-}
-
 footer section,
 footer div,
 footer ul,
@@ -365,13 +386,22 @@ footer p {
     color: var(--color-tertiary-1);
 }
 
-footer .title {
-    font-size: 1.5em;
-    margin-bottom: 10%;
-    text-align: center;
+footer {
+    background-color: var(--color-contrast);
+
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+
+    padding: 2%;
 }
 
-footer section#footerLogo {
+footer .title {
+    margin-bottom: 10%;
+    color: var(--color-primary-0);
+}
+
+footer #footerLogo {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -379,31 +409,39 @@ footer section#footerLogo {
     width: 10%;
 }
 
-footer section#footerLogo img {
+footer #footerLogo img {
     width: 60%;
 }
 
-footer section#footerMenu a:hover {
+footer #footerMenu li {
+    font-size: 70%;
+    padding: 10% 0;
+}
+
+footer #footerMenu a:hover {
     color: var(--color-primary-1);
 }
 
-footer section#footerSocial #img {
+footer #footerSocial #img {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-footer section#footerSocial #img a {
+footer #footerSocial #img a {
     text-align: center;
 }
 
-footer section#footerSocial #img img {
+footer #footerSocial #img img {
     width: 50%;
 }
 
 /* ***** RESPONSIVE ***** */
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
+    * {
+        font-size: 20px;
+    }
 
     main {
         padding: 0%;
@@ -413,18 +451,13 @@ footer section#footerSocial #img img {
         font-size: 3em;
     }
 
-    .title {
-        font-size: 1.5em;
-        text-align: center;
-    }
-
     form label {
         font-size: 0.8em;
     }
 
     header {
         display: flex;
-        
+
         justify-content: top;
         flex-direction: column;
         height: 100vh;
@@ -462,6 +495,7 @@ footer section#footerSocial #img img {
     header nav .logoHeader button i {
         background-color: transparent;
         color: var(--color-primary-0);
+        font-size: 100%;
     }
 
     header nav .main_nav {
@@ -499,6 +533,7 @@ footer section#footerSocial #img img {
     header #banner #text {
         width: 100%;
         text-align: center;
+        margin-top: 10%;
     }
 
     header #banner #text p#bannerText {
@@ -506,28 +541,11 @@ footer section#footerSocial #img img {
         text-align: justify;
     }
 
-    header #banner #text div.right div.buttons {
-        margin: 20% 0 10% 0;
-    }
-
-    header #banner #text div.right div.buttons a {
-        width: 50%;
-    }
-
-    header #banner #text div.right div.buttons button {
-        padding: 4% 10%;
-    }
-
-    header #banner #text div.right .bannerButton {
-        width: 34%;
-        margin-bottom: 10%;
+    header #navegateButtons {
+        margin-top: 10%;
     }
 
     /* ----- MAIN: VITRINE ----- */
-
-    main #vitrine {
-        margin-bottom: 10%;
-    }
 
     main #vitrine .productName {
         margin-top: 10%;
@@ -535,57 +553,116 @@ footer section#footerSocial #img img {
         font-size: 1em;
     }
 
-    main #vitrine a.linkAll button.buttonAll {
-        background: var(--color-primary-0);
-        color: var(--color-secondary);
-        font-weight: 700;
-        border: none;
-        padding: 1.5% 5%;
+    /* ----- MAIN:ALLHERE ----- */
+    main #allHere p,
+    main #allHere a,
+    main #allHere div {
+        background-color: transparent;
     }
 
-    main #vitrine .owl-nav {
-        display: flex;
+    main #allHere {
         align-items: center;
-        justify-content: space-around;
-        text-align: center;
-
-        font-size: 200%;
-        width: 25%;
-        margin: 0 auto;
-
+        flex-direction: column-reverse;
     }
+
+    main #allHere .left {
+        margin-top: 5%;
+        padding: 0 10%;
+    }
+
+    main #allHere .left p.text {
+        margin: 8% 0;
+
+        width: 100%;
+        text-align: justify;
+
+        line-height: 150%;
+        color: var(--color-secondary);
+
+        font-size: 100%;
+    }
+
+
+    main #allHere .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    main #allHere .right img {
+        width: 100%;
+    }
+
 
     /* ----- MAIN:TEMPO ----- */
 
-    main section#tempo {
+    main #tempo {
         margin: 20% 0;
     }
 
-    main section#tempo p {
+    main #tempo p {
         font-size: 1.5em;
+    }
+
+    /* ----- MAIN:PALAZZOWATHCES -----*/
+
+    main #palazzoWatches {
+        margin-top: 7%;
+        padding: 0 5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    main #palazzoWatches .right,
+    main #palazzoWatches .left {
+        width: 100%;
+    }
+
+    main #palazzoWatches .right p.title {
+        padding: 4%;
+    }
+
+    main #palazzoWatches .right p.text {
+        padding: 3% 0;
+
+        text-align: justify;
+
+        line-height: 150%;
+        color: var(--color-secondary);
+
+        font-size: 0.8em;
+    }
+
+    main #palazzoWatches .left {
+        text-align: center;
+    }
+
+    main #palazzoWatches .left img {
+        width: 90%;
     }
 
 
     /* ----- MAIN:CONTATO -----*/
 
-    main section#contato {
+    main #contato {
         border: 1px solid var(--color-primary);
     }
 
-    main section#contato p {
+    main #contato p {
         font-size: 0.8em;
     }
 
-    main section#contato p.title {
-        font-size: 2em;
+    main #contato p.title {
         margin: 5%;
     }
 
-    main section#contato .fastContact {
+    main #contato .fastContact {
         margin: 5%;
     }
 
-    main section#contato small {
+    main #contato small {
         font-size: 0.7em;
     }
 
@@ -605,18 +682,19 @@ footer section#footerSocial #img img {
     footer .title {
         font-size: 1em;
         margin-bottom: 10%;
-        text-align: center;
     }
 
-    footer section#footerLogo, footer section#footerMenu {
+    footer #footerLogo,
+    footer #footerMenu {
         display: none;
-    }    
+    }
 
-    footer section#footerPayment img, footer section#footerDelivery img {
+    footer #footerPayment img,
+    footer #footerDelivery img {
         width: 70%;
     }
 
-    footer section#footerSocial #img img {
+    footer #footerSocial #img img {
         width: 30%;
     }
 }

@@ -64,50 +64,49 @@
 
     </header>
 
-    
+
     <main>
         <section id="vitrine">
-            <p class="title">RECONSTRUA O TEMPO A SEU ESTILO</p>
+            <p class="title">TENDÊNCIAS</p>
             <div class="owl-carousel">
                 <div class="item">
-                    <!--<a href="#"><img src="img/watches/relogio1.png" alt=""></a>-->
-                    <a
-                        href="https://api.whatsapp.com/send?phone=+5543991771914&text=Olá, me interessei pelo relógio TAG HEUER FÓRMULA 1">
+                    <a href="#">
                         <img src="img/watches/relogio1.png" alt="">
                     </a>
-
                     <p class="productName">TAG HEUER FÓRMULA 1</p>
-                    <a href="">Ver relógio</a>
+
                 </div>
                 <div class="item">
-                    <!--<a href="#"><img src="img/watches/relogio1.png" alt=""></a>-->
                     <a href="https://api.whatsapp.com/send?phone=+5543991771914&text=XXXXXXXXXXXXXXXXx">
                         <img src="img/watches/relogio1.png" alt="">
                     </a>
                     <p class="productName">TAG HEUER FÓRMULA 1</p>
-                    <a href="">Ver relógio</a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <a href="#">
+                        <img src="img/watches/relogio1.png" alt="">
+                    </a>
                     <p class="productName">TAG HEUER FÓRMULA 1</p>
-                    <a href="">Ver relógio</a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
+                    <a href="#">
+                        <img src="img/watches/relogio1.png" alt="">
+                    </a>
                     <p class="productName">TAG HEUER FÓRMULA 1</p>
-                    <a href="">Ver relógio</a>
-                </div>
-                <div class="item">
-                    <a href="#"><img src="img/watches/relogio1.png" alt=""></a>
-                    <p class="productName">TAG HEUER FÓRMULA 1</p>
-                    <a href="">Ver relógio</a>
                 </div>
             </div>
+        </section>
 
-            <a href="" class="linkAll">
-                <button class="buttonAll">CONHEÇA TODOS OS MODELOS</button>
-            </a>
+        <section id="allHere">
+            <div class="left">
+                <p class="title">SEU RELÓGIO ESTÁ AQUI</p>
+                <p class="text">Encontre a maneira certa de modificar o tempo com seu estilo em apenas um clique</p>
+                <p class="text">Venha conhecer nossas melhores peças <a href="#">AQUI!</a></p>
+            </div>
 
+            <div class="right">
+                <img src="img/banner/section1.jpeg" alt="">
+            </div>
         </section>
 
         <section id="tempo">
@@ -115,23 +114,37 @@
             <img src="img/icons/linha-tempo.svg" alt="">
         </section>
 
+        <section id="palazzoWatches">
+            <div class="left"><img src="img/banner/section2.jpeg" alt="office"></div>
+
+            <div class="right">
+                <p class="title">PALAZZO WATCHES</p>
+                <p class="text">A palazzo watches foi criada com o inuito de ajudar pessoas apaixonadas por relógios a
+                    conquistarem
+                    seus sonhos.</p>
+                <p class="text">Por aqui procuramos que você, nosso cliente, tenha a melhor experiência possível.</p>
+                <p class="text">Vendemos não somente a máquina que marca o bem mais valioso que há, o tempo, mas a
+                    possibilidade da
+                    objetificação da sua conquista!</p>
+            </div>
+        </section>
+
         <section id="contato">
             <p class="title">SIGA A GENTE</p>
-            <p>Fique por dentro das novidades em primeira mão e entre em contato com nossos atendentes.</p>            
+            <p class=text>Fique por dentro das novidades em primeira mão e entre em contato com nossos atendentes.</p>
 
             <div class="fastContact">
                 <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
                 <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
-            </div>                    
-
-            <!--<small>&reg; No mercado há mais de 2 anos prezando pela sua qualidade e conforto.</small>-->
+            </div>
             <span>Postagens de novidades de segunda à sexta ao meio dia!</span>
         </section>
+
     </main>
 
     <footer>
         <section id="footerLogo">
-            <img src="img/logo.png" alt="">            
+            <img src="img/logo.png" alt="">
         </section>
 
         <section id="footerMenu">
@@ -161,16 +174,7 @@
             <p class="title">Formas de entrega</p>
             <img src="img/icons/delivery.svg" alt="">
         </section>
-
-        <section id="footerSocial">
-            <p class="title">Redes Sociais</p>                        
-            <div id="img">
-                <a href="#"><img src="img/icons/Instagram.svg" alt="instragram"></a>
-                <a href="#"><img src="img/icons/Whatss.svg" alt="whatsapp"></a>
-            </div>            
-        </section>
     </footer>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -178,14 +182,14 @@
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 items: 3, // Número de itens visíveis no carousel
-                loop: true, // Repetir o carousel em loop
+                loop: false, // Repetir o carousel em loop
                 margin: 10, // Margem entre os itens
-                nav: true, // Exibir botões de navegação
+                nav: false, // Exibir botões de navegação
                 responsive: {
                     0: {
                         items: 2 // Número de itens visíveis no carousel em telas menores
                     },
-                    768: {
+                    1000: {
                         items: 4 // Número de itens visíveis no carousel em telas maiores
                     }
                 }
