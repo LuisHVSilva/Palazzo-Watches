@@ -98,6 +98,21 @@ header {
     height: 100vh;
 }
 
+header {
+    background-image: url(../img/banner/banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header.transition-effect {
+    opacity: 1;
+}
+
+header.transition-effect.fade-out {
+    opacity: 0;
+}
+
 /* ----- HEADER:NAV ----- */
 
 header nav {
@@ -109,7 +124,7 @@ header nav {
     border-bottom: 2px solid;
 
     border-image: linear-gradient(to right, rgba(170, 226, 250, 0.3), rgba(154, 86, 41, 1), rgba(154, 86, 41, 0.2)) 0.4;
-    background-color: var(--color-primary);
+    background-color: transparent;
 }
 
 header nav .logoHeader a img {
@@ -148,21 +163,27 @@ header nav .main_nav li a:hover {
 
 /* ----- HEADER:BANNER ----- */
 
+header #banner div {
+    background-color: transparent;
+}
+
 header #banner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 60% 40%;
     align-items: center;
-    justify-content: space-evenly;
+    background-color: transparent;
 }
 
 
 header #banner #text {
-    width: 50%;
+    grid-column: 2 / 3;
+    margin: 0 auto;
 }
 
-header #banner #text p#bannerBrand {
+header #banner #text p#bannerTitle {
     font-weight: 700;
     font-size: 1.5em;
-    color: var(--color-primary-0)
+    color: var(--color-primary-0);
 }
 
 header #banner #text p#bannerText {
@@ -190,19 +211,21 @@ header #banner #text div.bannerButton {
     width: 100%;
 }
 
-header #banner #text div.bannerButton .buyNow {
+header #banner #text div.bannerButton a {
     align-self: flex-start;
     text-align: center;
 }
 
-header #banner #text div.bannerButton .buyNow button {
+header #banner #text div.bannerButton a button {
     padding: 10% 80%;
     border: none;
     font-weight: 700;
+    background-color: var(--color-primary-0);
+    color: var(--color-contrast);
     transition: background-color 0.2s ease;
 }
 
-header #banner #text div.bannerButton .buyNow button:hover {
+header #banner #text div.bannerButton button:hover {
     background-color: var(--color-primary);
     color: white;
 }
@@ -213,7 +236,9 @@ header #navegateButtons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2%;
+    background-color: white;
+
+    width: 100%;
 }
 
 header #navegateButtons button {
@@ -265,8 +290,12 @@ main #allHere {
     margin-top: 10%;
 
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: center;
+}
+
+main #allHere .left {
+    width: 40%;
 }
 
 main #allHere .left p.title {
@@ -274,7 +303,7 @@ main #allHere .left p.title {
 }
 
 main #allHere .left p.text {
-    margin: 8% 0;
+    margin-top: 5%;
 
     width: 75%;
     text-align: justify;
@@ -295,12 +324,15 @@ main #allHere .left a:hover {
 }
 
 main #allHere .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
     width: 50%;
-    background-color: black;
 }
 
 main #allHere .right img {
-    width: 50%;
+    width: 48%;
 }
 
 /* ----- MAIN:TEMPO ----- */
@@ -620,11 +652,7 @@ footer #footerSocial #img img {
     }
 
     header {
-        display: flex;
-
-        justify-content: top;
-        flex-direction: column;
-        height: 100vh;
+        grid-template-rows: 15% 75% 10%;
     }
 
 
@@ -685,13 +713,17 @@ footer #footerSocial #img img {
 
     /* ----- HEADER:BANNER ----- */
 
+    header {
+        background-image: url(../img/banner/banner1-celular.png);        
+    }
+
     header #banner {
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: end;
+        flex-direction: column;        
 
-        padding: 10% 6%;
+        padding: 0% 6%;
     }
 
     header #banner #text {
@@ -700,9 +732,14 @@ footer #footerSocial #img img {
         margin-top: 10%;
     }
 
-    header #banner #text p#bannerText {
+    header #banner #text p {
         width: 100%;
-        text-align: justify;
+        text-align: start;        
+    }
+
+    header #banner #text p#bannerText, header #banner #text p#bannerTitle {
+        font-weight: 700;
+        color: white;        
     }
 
     header #navegateButtons {
@@ -711,18 +748,9 @@ footer #footerSocial #img img {
 
     /* ----- MAIN: VITRINE ----- */
 
-    main #vitrine .productName {
-        margin-top: 10%;
-        margin-bottom: 4%;
-        font-size: 1em;
-    }
+
 
     /* ----- MAIN:ALLHERE ----- */
-    main #allHere p,
-    main #allHere a,
-    main #allHere div {
-        background-color: transparent;
-    }
 
     main #allHere {
         align-items: center;
@@ -731,7 +759,8 @@ footer #footerSocial #img img {
 
     main #allHere .left {
         margin-top: 5%;
-        padding: 0 10%;
+        padding: 0 5%;
+        width: 90%;
     }
 
     main #allHere .left p.text {
@@ -753,7 +782,7 @@ footer #footerSocial #img img {
     }
 
     main #allHere .right img {
-        width: 100%;
+        width: 50%;
     }
 
 

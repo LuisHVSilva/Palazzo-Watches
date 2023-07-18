@@ -15,11 +15,11 @@
     <!--Owl carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">    
 </head>
 
 <body>
-    <header class="background-color">
+    <header class="transition-effect">
         <nav>
             <div class="logoHeader">
                 <a href="index.html" class="logo">
@@ -41,23 +41,21 @@
         </nav>
 
         <section id="banner" class="background-color">
-            <img id="bannerImg">
             <div id="text" class="background-color">
-                <p id="bannerBrand" class="first"></p>
+                <p id="bannerTitle" class="title"></p>
                 <p id="bannerText" class="description"></p>
                 <div class="bannerButton">
-                    <a href="#" class="buyNow">
-                        <button>COMPRAR</button>
+                    <a id="bannerLink">
+                        <button id="bannerButton"></button>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="navegateButtons" class="navegateButtons background-color">
+        <section id="navegateButtons" class="navegateButtons">
             <button id="leftButton" onclick="bannerChageLess()"><img src="img/icons/seta-esquerda.svg" alt=""></button>
             <button id="rightButton" onclick="bannerChagePlus()"><img src="img/icons/seta-direita.svg" alt=""></button>
         </section>
-
     </header>
 
     <main>
@@ -97,13 +95,18 @@
         <section id="allHere">
             <div class="left">
                 <p class="title">SEU RELÓGIO ESTÁ AQUI</p>
-                <p class="text">Encontre a maneira certa de modificar o tempo com seu estilo em apenas um clique</p>
-                <p class="text">Venha conhecer nossas melhores peças <a href="#">AQUI!</a></p>
+                <p class="text">A excelência em estilo e opções é nossa
+                    prioridade. Aqui, trabalhamos incansavelmente para oferecer uma vasta seleção de relógios de pulso
+                    para venda, troca e compra. Com um estoque diversificado e em constante renovação, temos o prazer de
+                    atender a todos os gostos e preferências.  Explore a nossa variedade de relógios e desfrute da
+                    experiência de encontrar o acessório perfeito para o seu estilo e ocasião.</p>
+                <p class="text">Qualquer dúvida estamos à sua disposição. <a href="catalogo.html">Contato</a></p>
             </div>
 
             <div class="right">
                 <!--<img src="img/banner/section1.jpeg" alt="">-->
-                <img src="img/banner/allHere.jpg" alt="">
+                <img src="img/banner/allHere1.png" alt="">
+                <img src="img/banner/allHere2.png" alt="">
             </div>
         </section>
 
@@ -132,9 +135,9 @@
             <p class=text>Fique por dentro das novidades em primeira mão e entre em contato com nossos atendentes.</p>
 
             <div class="fastContact">
-                <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"
+                <a href="https://www.instagram.com/palazzowatches/"><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"
                         onmouseover="newImage('insta')" onmouseout="oldImage('insta')"></a>
-                <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"
+                <a href="https://api.whatsapp.com/send?phone=+5543991771914&text=Olá, Palazzo."><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"
                         onmouseover="newImage('whatss')" onmouseout="oldImage('whatss')"></a>
             </div>
             <span>Postagens de novidades de segunda à sexta ao meio dia!</span>
@@ -178,7 +181,7 @@
 
     <!--JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/banner.js"></script>
 </body>

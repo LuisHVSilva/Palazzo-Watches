@@ -1,14 +1,14 @@
 // ****** FILTRO
 
 function abrirFiltro() {
-    const filtro = document.getElementById("filtro");    
+    const filtro = document.getElementById("filtro");
 
     filtro.classList.toggle("open");
     filtro.classList.toggle("closed");
 }
 
 function fecharFiltro() {
-    const filtro = document.getElementById("filtro")    
+    const filtro = document.getElementById("filtro")
     filtro.style.display = "none";
 }
 

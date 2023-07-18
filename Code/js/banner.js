@@ -1,55 +1,50 @@
-const watch1 = {
-    text: 'A brisa suave acariciava os campos verdejantes enquanto o sol se punha no horizonte. O crepúsculo pintava o céu com tons quentes de laranja e rosa, criando uma paisagem deslumbrante. As árvores balançavam ao ritmo da brisa, sussurrando melodias suaves. No ar, um aroma doce de flores selvagens enchia os sentidos',
-    img: 'img/banner/watch1.png',
-    brand: 'VICTORINOX SWISS ARMY MAVERICK',
+const banner1 = {
+    img: 'img/banner/banner1.png',
+    imgCelular: 'img/banner/banner1-celular.png',
+    title: '',
+    text: '',       
+    button: '',    
 }
 
-const watch2 = {
-    text: 'Os pássaros cantavam em harmonia, celebrando a chegada da noite. As estrelas começavam a pontilhar o céu escuro, como pequenos diamantes brilhantes. Uma sensação de serenidade envolvia tudo ao redor, como se o mundo estivesse em perfeita harmonia.',
-    img: 'img/banner/watch2.png',
-    brand: 'TAG HEUER FORMULA 1 GRAND DATE BLACK DIAL',
+const banner2 = {
+    img: 'img/banner/banner2.png',
+    imgCelular: 'img/banner/banner2-celular.png',
+    title: 'Esteja no controle do seu tempo com estilo',    
+    text: 'CONHEÇA NOSSO CATÁLOGO',
+    link: 'catalogo.html',
+    button: 'RELÓGIOS',        
 }
 
-const watch3 = {
-    text: 'Em meio a essa cena tranquila, uma figura solitária caminhava pela estrada de terra. Seus passos eram calmos e determinados, enquanto sua mente vagava por pensamentos profundos. As memórias do passado misturavam-se com sonhos do futuro, criando uma tapeçaria de esperança e nostalgia.',
-    img: 'img/banner/watch3.png',
-    brand: 'VICTORINOX SWISS ARMY INFANTRY',
-    model: '',
+const banner3 = {
+    img: 'img/banner/banner3.png',
+    imgCelular: 'img/banner/banner3-celular.png',
+    title: 'Descubra a elegância eterna',    
+    text: 'UMA HISTÓRIA EM SEU PULSO',
+    link: '#',
+    button: 'COMPRAR',        
 }
 
-const watch4 = {
-    text: 'Cada passo era uma jornada, cada respiração uma conexão com a vida. A figura solitária sentia uma profunda gratidão pelo momento presente e uma fome insaciável pela aventura que o futuro reservava.',
-    img: 'img/banner/watch4.png',
-    brand: 'TISSOT PRC 200 BLUE DIAL CHRONOGRAPH',
-}
-
-const watch5 = {
-    text: 'Enquanto a noite avançava e o mundo descansava, a figura solitária continuava sua caminhada, mergulhando no desconhecido com coragem e determinação. Pois, no coração daquela pessoa, havia uma centelha de curiosidade e um desejo incessante de descobrir o mundo ao seu redor.',
-    img: 'img/banner/watch5.png',
-    brand: 'MIDO BARONCELLI AUTOMÁTICO',
-}
-
-const watches = [watch1, watch2, watch3, watch4, watch5]
+const banners = [banner1, banner2, banner3]
 
 var iterator = 0
 
 function bannerChagePlus() {
-    if (iterator >= 4) {
+    if (iterator >= 2) {
         iterator = -1
     }
 
     iterator++
-    banner(watches[iterator])
+    banner(banners[iterator])
 }
 
 function bannerChageLess() {
 
     if (iterator <= 0) {
-        iterator = 5
+        iterator = 3
     }
 
     iterator--
-    banner(watches[iterator])
+    banner(banners[iterator])
 }
 
 function transition(div, obj) {
@@ -61,53 +56,44 @@ function transition(div, obj) {
 }
 
 function banner(obj) {
-    const bannerImg = document.getElementById('bannerImg');    
-    bannerImg.classList.add('oculto');
-    setTimeout(function () {
-        bannerImg.src = obj.img;
-        bannerImg.classList.remove('oculto');
-    }, 500);    
-    bannerImg.alt = obj.brand + obj.model;
+    const banner = document.getElementsByTagName('header')[0];
+    banner.classList.add("fade-out");
 
-    /*
+    setTimeout(function () {
+        banner.style.backgroundImage = "url(" + obj.img + ")"
+
+        if (window.innerWidth < 800) {
+            banner.style.backgroundImage = "url(" + obj.imgCelular + ")"
+        }
+        
+        banner.classList.remove("fade-out");
+    }, 300);
+
+    const bannerTitle = document.getElementById('bannerTitle');
+    bannerTitle.classList.add("fade-out");
+    
+    setTimeout(function () {
+        bannerTitle.textContent = obj.title;
+        bannerTitle.classList.remove("fade-out");
+    }, 300);
+
     const bannerText = document.getElementById('bannerText');
-    bannerText.classList.add('oculto');
+    bannerText.classList.add("fade-out");
+    
     setTimeout(function () {
         bannerText.textContent = obj.text;
-        bannerText.classList.remove('oculto');
-    }, 500);
+        bannerText.classList.remove("fade-out");
+    }, 300);
 
-    const bannerBrand = document.getElementById('bannerBrand');
-    bannerBrand.classList.add('oculto');
+    const bannerButton = document.getElementById('bannerButton')
+    bannerButton.classList.add("fade-out");
+    
     setTimeout(function () {
-        bannerBrand.textContent = obj.brand;
-        bannerBrand.classList.remove('oculto');
-    }, 500);    
+        bannerButton.textContent = obj.button;
+        bannerButton.classList.remove("fade-out");
+    }, 300);
 
-    const bannerModel = document.getElementById('bannerModel');
-    bannerModel.classList.add('oculto');
-    setTimeout(function () {
-        bannerModel.textContent = obj.model;
-        bannerModel.classList.remove('oculto');
-    }, 500);    
-    */
+    
+    const bannerLink = document.getElementById('bannerLink')
+    bannerLink.href = obj.link;    
 };
-
-function bannerOnLoad(obj) {
-    const bannerImg = document.getElementById('bannerImg');
-    bannerImg.src = obj.img;
-    bannerImg.alt = obj.brand + obj.model;
-
-    /*
-    const bannerText = document.getElementById('bannerText');
-    bannerText.textContent = obj.text;
-
-    const bannerBrand = document.getElementById('bannerBrand');
-    bannerBrand.textContent = obj.brand;
-
-    const bannerModel = document.getElementById('bannerModel');
-    bannerModel.textContent = obj.model;
-    */
-}
-
-window.onload = bannerOnLoad(watch1)
