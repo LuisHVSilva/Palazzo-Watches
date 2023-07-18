@@ -12,9 +12,6 @@
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
 
-    <!--JS-->
-    <script src="js/script.js"></script>
-
     <!--Owl carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -46,9 +43,9 @@
 
     <main>
         <section id="filter">
-            <button onclick="abrirFiltro()" class="filterButton">Filtro</button>
+            <button class="filterButton" onclick="abrirFiltro()">Filtro</button>
 
-            <div id="filtro-overlay" onclick="fecharFiltro()">
+            <div id="filtro" class="closed" onclick="fecharFiltro()">
                 <div id="filtro-content" onclick="event.stopPropagation()">
                     <p class="title">Filtro</p>
                     <label>
@@ -58,41 +55,201 @@
                         <input type="checkbox" value="rolex" onchange="filtrar()">Rolex
                     </label>
                     <label>
-                        <input type="checkbox" value="tagHeuer" onchange="filtrar()">Tag Heuer
+                        <input type="checkbox" value="breitiling" onchange="filtrar()">Breitiling
                     </label>
                     <label>
-                        <input type="checkbox" value="omega" onchange="filtrar()">Omega
+                        <input type="checkbox" value="bvlgari" onchange="filtrar()">Bvlgari
                     </label>
                     <label>
-                        <input type="checkbox" value="breitling" onchange="filtrar()">Breitling
+                        <input type="checkbox" value="outros" onchange="filtrar()">Outros
                     </label>
                 </div>
             </div>
         </section>
 
-        <div id="itens">
-            <div class="item rolex">Rolex 1</div>
-            <div class="item rolex">Rolex 2</div>
-            <div class="item rolex">Rolex 3</div>
-            <div class="item rolex">Rolex 4</div>
 
+        <section id="itens">
 
-            <div class="item tagHeuer">tagHeuer 1</div>
-            <div class="item tagHeuer">tagHeuer 2</div>
-            <div class="item tagHeuer">tagHeuer 3</div>
-            <div class="item tagHeuer">tagHeuer 4</div>
+            <div class="container rolex" id="rolexContainer">
+                <p class="title">ROLEX</p>
+                <div class="watches owl-carousel">
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/rolex_2.png" id="r2" onclick="redirecionarLink('r2')">
+                        </div>
+                        <p>Rolex 2</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/rolex_3.png" id="r3" onclick="redirecionarLink('r3')">
+                        </div>
+                        <p>Rolex 3</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/rolex_4.png" id="r4" onclick="redirecionarLink('r4')">
+                        </div>
+                        <p>Rolex 4</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/rolex_5.png" id="r5" onclick="redirecionarLink('r5')">
+                        </div>
+                        <p>Rolex 5</p>
 
-            <div class="item omega">Omega 1</div>
-            <div class="item omega">Omega 2</div>
-            <div class="item omega">Omega 3</div>
-            <div class="item omega">Omega 4</div>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/rolex_6.png" id="r6" onclick="redirecionarLink('r6')">
+                        </div>
+                        <p>Rolex 6</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container breitiling" id="breitilingContainer">
+                <p class="title">BREITILING</p>
+                <div class="watches owl-carousel">
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_1.png" id="b1" onclick="redirecionarLink('b1')">
+                        </div>
+                        <p>Breitiling 1</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_2.png" id="b2" onclick="redirecionarLink('b2')">
+                        </div>
+                        <p>Breitiling 2</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_3.png" id="b3" onclick="redirecionarLink('b3')">
+                        </div>
+                        <p>Breitiling 3</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_4.png" id="b4" onclick="redirecionarLink('b4')">
+                        </div>
+                        <p>Breitiling 4</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_5.png" id="b5" onclick="redirecionarLink('b5')">
+                        </div>
+                        <p>Breitiling 5</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_6.png" id="b6" onclick="redirecionarLink('b6')">
+                        </div>
+                        <p>Breitiling 6</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/breitiling_7.png" id="b7" onclick="redirecionarLink('b7')">
+                        </div>
+                        <p>Breitiling 7</p>
+                    </div>
+                </div>
+            </div>
 
-            <div class="item breitling">Breitling 1</div>
-            <div class="item breitling">Breitling 2</div>
-            <div class="item breitling">Breitling 3</div>
-            <div class="item breitling">Breitling 4</div>
-        </div>
+            <div class="container bvlgari" id="bvlgariContainer">
+                <p class="title">BVLGARI</p>
+                <div class="watches owl-carousel">
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/bvlgari_1.png" id="bv1" onclick="redirecionarLink('bv1')">
+                        </div>
+                        <p>Bvlgari 1</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/bvlgari_2.png" id="bv2" onclick="redirecionarLink('bv2')">
+                        </div>
+                        <p>Bvlgari 2</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/bvlgari_3.png" id="bv3" onclick="redirecionarLink('bv3')">
+                        </div>
+                        <p>Bvlgari 3</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/bvlgari_4.png" id="bv4" onclick="redirecionarLink('bv4')">
+                        </div>
+                        <p>Bvlgari 4</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container outros" id="outrosContainer">
+                <p class="title">OUTROS</p>
+                <div class="watches owl-carousel">
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/patekphilippe_1.png" id="o1" onclick="redirecionarLink('o1')">
+                        </div>
+                        <p>Patek Philippe 1</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/chopard_1.png" id="o2" onclick="redirecionarLink('o2')">
+                        </div>
+                        <p>Chopard 1</p>
+                    </div>
+                    <div class="item">
+                        <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                            <img src="img/watches/tagheuer_1.png" id="o3" onclick="redirecionarLink('o3')">
+                        </div>
+                        <p>Tag Heuer 1</p>
+                    </div>                    
+                </div>
+            </div>
+
+        </section>
     </main>
 
+    <footer>
+        <section id="footerLogo">
+            <img src="img/logo.png" alt="">
+        </section>
+
+        <section id="footerMenu">
+            <p class="title">Menu</p>
+            <ul>
+                <li>
+                    <a href="#" class="">HOME</a>
+                </li>
+                <li>
+                    <a href="#" class="">CATÁLOGO</a>
+                </li>
+                <li>
+                    <a href="#" class="">SOBRE</a>
+                </li>
+                <li>
+                    <a href="#" class="">CONTATO</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="footerPayment">
+            <p class="title">Formas de pagamento</p>
+            <img src="img/icons/payment.svg" alt="">
+        </section>
+
+        <section id="footerDelivery">
+            <p class="title">Formas de entrega</p>
+            <img src="img/icons/delivery.svg" alt="">
+        </section>
+    </footer>
+
+
+    <!--JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
     <script src="js/filter.js"></script>
+    <script src="js/script.js"></script>
 </body>

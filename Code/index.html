@@ -12,9 +12,6 @@
     <!--FontAwesome-->
     <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
 
-    <!--JS-->
-    <script src="js/script.js"></script>
-
     <!--Owl carousel-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -49,7 +46,6 @@
                 <p id="bannerBrand" class="first"></p>
                 <p id="bannerText" class="description"></p>
                 <div class="bannerButton">
-
                     <a href="#" class="buyNow">
                         <button>COMPRAR</button>
                     </a>
@@ -64,35 +60,36 @@
 
     </header>
 
-
     <main>
         <section id="vitrine">
             <p class="title">TENDÊNCIAS</p>
             <div class="owl-carousel">
                 <div class="item">
-                    <a href="#">
-                        <img src="img/watches/tagHeuer.jpeg" alt="">
-                    </a>
-                    <p class="productName">TAG HEUER FÓRMULA 1</p>
-
+                    <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                        <img src="img/watches/tagheuer_1.png" alt="" onclick="redirecionarLink('o3')">
+                    </div>
+                    <p class="productName">Tag Heuer Fórmula 1</p>
                 </div>
                 <div class="item">
-                    <a href="https://api.whatsapp.com/send?phone=+5543991771914&text=XXXXXXXXXXXXXXXXx">
-                        <img src="img/watches/relogio1.png" alt="">
-                    </a>
-                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                        <img src="img/watches/breitiling_3.png" alt="" onclick="redirecionarLink('b3')">
+                        </a>
+                    </div>
+                    <p class="productName">Breiteling Bentley Motors</p>
                 </div>
                 <div class="item">
-                    <a href="#">
-                        <img src="img/watches/relogio1.png" alt="">
+                    <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                        <img src="img/watches/bvlgari_3.png" alt="" onclick="redirecionarLink('bv3')">
+                    </div>
                     </a>
-                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <p class="productName">Bvulgari</p>
                 </div>
                 <div class="item">
-                    <a href="#">
-                        <img src="img/watches/relogio1.png" alt="">
-                    </a>
-                    <p class="productName">TAG HEUER FÓRMULA 1</p>
+                    <div class="image-zoom-container" onmousemove="zoomImage(event)" onmouseleave="resetZoom()">
+                        <img src="img/watches/rolex_3.png" alt="" onclick="redirecionarLink('r3')">
+                        </a>
+                    </div>
+                    <p class="productName">Rolex GMT Master 2 Pepsi </p>
                 </div>
             </div>
         </section>
@@ -135,8 +132,10 @@
             <p class=text>Fique por dentro das novidades em primeira mão e entre em contato com nossos atendentes.</p>
 
             <div class="fastContact">
-                <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"></a>
-                <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"></a>
+                <a href=""><img src="img/icons/Instagram.svg" alt="instagram-logo" id="instagram"
+                        onmouseover="newImage('insta')" onmouseout="oldImage('insta')"></a>
+                <a href=""><img src="img/icons/Whatss.svg" alt="whatssapp-logo" id="whatssapp"
+                        onmouseover="newImage('whatss')" onmouseout="oldImage('whatss')"></a>
             </div>
             <span>Postagens de novidades de segunda à sexta ao meio dia!</span>
         </section>
@@ -177,61 +176,10 @@
         </section>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
-                items: 3, // Número de itens visíveis no carousel
-                loop: false, // Repetir o carousel em loop
-                margin: 10, // Margem entre os itens
-                nav: false, // Exibir botões de navegação
-                responsive: {
-                    0: {
-                        items: 2 // Número de itens visíveis no carousel em telas menores
-                    },
-                    1000: {
-                        items: 4 // Número de itens visíveis no carousel em telas maiores
-                    }
-                }
-            });
-        });
-    </script>
-
-    <script>
-        const instagram = document.getElementById("instagram");
-
-        instagram.addEventListener("mouseover", function () {
-            this.src = "img/icons/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
-        });
-
-        instagram.addEventListener("mouseout", function () {
-            this.src = "img/icons/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
-        });
-
-        const whatss = document.getElementById("whatssapp");
-
-        whatss.addEventListener("mouseover", function () {
-            this.src = "img/icons/whatss-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
-        });
-
-        whatss.addEventListener("mouseout", function () {
-            this.src = "img/icons/Whatss.svg"; /* Restaura a primeira imagem ao retirar o mouse */
-        });
-
-        const socialInstagram = document.getElementById("socialInstagram");
-
-        socialInstagram.addEventListener("mouseover", function () {
-            this.src = "img/icons/instagram-hover.svg"; /* Troca para a segunda imagem ao passar o mouse */
-        });
-
-        socialInstagram.addEventListener("mouseout", function () {
-            this.src = "img/icons/Instagram.svg"; /* Restaura a primeira imagem ao retirar o mouse */
-        });
-    </script>
-
     <!--JS-->
-    <script src="js/endscript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>    
+    <script src="js/script.js"></script>
     <script src="js/banner.js"></script>
 </body>
 

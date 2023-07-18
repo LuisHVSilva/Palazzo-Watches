@@ -1,12 +1,17 @@
+// ****** FILTRO
+
 function abrirFiltro() {
-    var overlay = document.getElementById("filtro-overlay");
-    overlay.style.display = "flex";
+    const filtro = document.getElementById("filtro");    
+
+    filtro.classList.toggle("open");
+    filtro.classList.toggle("closed");
 }
 
 function fecharFiltro() {
-    var overlay = document.getElementById("filtro-overlay");
-    overlay.style.display = "none";
+    const filtro = document.getElementById("filtro")    
+    filtro.style.display = "none";
 }
+
 
 function filtrar() {
     // Obtenha todos os checkboxes
@@ -20,32 +25,33 @@ function filtrar() {
         }
     });
 
-    // Obtenha todos os itens a serem filtrados
-    var itens = document.getElementsByClassName("item");
+    // Obtenha todos os itens a serem filtrados    
+    var containers = document.getElementsByClassName("container");
 
     // Se nenhuma opção estiver selecionada, exiba todos os itens
     if (opcoesSelecionadas.length === 0) {
-        for (var l = 0; l < itens.length; l++) {
-            itens[l].style.display = "block";
+        for (c = 0; t < containers.length; c++) {
+            containers[t].style.display = "flex";
         }
         return; // Saia da função para evitar a filtragem adicional
     }
 
-    // Percorra os itens e verifique se cada item tem uma classe correspondente às opções selecionadas
-    for (var j = 0; j < itens.length; j++) {
-        var item = itens[j];
+    // Percorra os itens e verifique se cada item tem uma classe correspondente às opções selecionada
+    for (var j = 0; j < containers.length; j++) {
+        var container = containers[j];
         var temClasse = false;
         for (var k = 0; k < opcoesSelecionadas.length; k++) {
-            if (item.classList.contains(opcoesSelecionadas[k])) {
+            if (container.classList.contains(opcoesSelecionadas[k])) {
                 temClasse = true;
                 break;
             }
         }
         // Exiba ou oculte o item com base no resultado da verificação
         if (temClasse) {
-            item.style.display = "block";
+            container.style.display = "flex";
+
         } else {
-            item.style.display = "none";
+            container.style.display = "none";
         }
     }
 }
@@ -53,17 +59,19 @@ function filtrar() {
 function selecionarTodos() {
     var checkboxTodos = document.getElementById("checkbox-todos");
     var checkboxes = document.querySelectorAll("#filtro-content input[type='checkbox']:not(#checkbox-todos)");
-  
+
     if (checkboxTodos.checked) {
-      checkboxes.forEach(function (checkbox) {
-        checkbox.checked = true;
-      });
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = true;
+        });
     } else {
-      checkboxes.forEach(function (checkbox) {
-        checkbox.checked = false;
-      });
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+        });
     }
-  
+
     filtrar(); // Chame a função filtrar() para aplicar o filtro atualizado
-  }
-  
+}
+
+// **** IMAGENS
+// Abrir e fechar o Menu Responsivo Toggle
