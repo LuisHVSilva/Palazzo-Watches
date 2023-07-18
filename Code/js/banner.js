@@ -1,14 +1,14 @@
 const banner1 = {
-    img: 'img/banner/banner1.png',
-    imgCelular: 'img/banner/banner1-celular.png',
+    img: 'img/banner/banner1.webp',
+    imgCelular: 'img/banner/banner1-celular.webp',
     title: '',
     text: '',       
     button: '',    
 }
 
 const banner2 = {
-    img: 'img/banner/banner2.png',
-    imgCelular: 'img/banner/banner2-celular.png',
+    img: 'img/banner/banner2.webp',
+    imgCelular: 'img/banner/banner2-celular.webp',
     title: 'Esteja no controle do seu tempo com estilo',    
     text: 'CONHEÇA NOSSO CATÁLOGO',
     link: 'catalogo.html',
@@ -16,8 +16,8 @@ const banner2 = {
 }
 
 const banner3 = {
-    img: 'img/banner/banner3.png',
-    imgCelular: 'img/banner/banner3-celular.png',
+    img: 'img/banner/banner3.webp',
+    imgCelular: 'img/banner/banner3-celular.webp',
     title: 'Descubra a elegância eterna',    
     text: 'UMA HISTÓRIA EM SEU PULSO',
     link: '#',
