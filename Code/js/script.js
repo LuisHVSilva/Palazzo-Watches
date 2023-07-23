@@ -64,29 +64,31 @@ function resetZoom() {
 
 /* ***** URL DAS IMAGENS ***** */
 
-watchLink = {
-    b1: 'Breitiling 1',
-    b2: 'Breitiling 2',
-    b3: 'Breitiling 3',
-    b4: 'Breitiling 4',
-    b5: 'Breitiling 5',
-    b6: 'Breitiling 6',
-    b7: 'Breitiling 7',
+watchLink = {    
+    r2: 'Rolex Explorer, ref: 16570, 40mm',
+    r3: 'Rolex GMT-MASTER I Pepsi, ref: 1675, 40mm',    
+    r4: 'Rolex Oyster Perpetual, ref: 114200, 34mm',
+    r5: 'Rolex Oyster Perpetual, ref: 6551, 31mm',
+    r6: '',
 
-    bv1: 'Bvltari 1',
-    bv2: 'Bvltari 2',
-    bv3: 'Bvltari 3',
-    bv4: 'Bvltari 4',
+    b1: 'Breitling Chronographe Evolution, ref: A13356, 43mm',
+    b2: 'Breitling Navitimer Montbrillant Legende White Dial, ref: A23340, 47mm', //PERGUNTAR
+    b3: 'Breitling Breitling Bentley Motors, A25362, 48mm',
+    b4: 'Breitling SuperOcean Chronometre automatic, ref: A17360, 42mm',
+    b5: 'Breitling Avenger Seawolf, ref: A73390, 45.4mm',
+    b6: 'Breitling Colt, ref: A17380, 41mm',
+    b7: 'Breitling Chronograph Two Tone Steel Gold Black Automatic Wristwatch, ref: B13050, 40mm',
 
-    r2: 'Rolex 1',
-    r3: 'Rolex 2',
-    r4: 'Rolex 3',
-    r5: 'Rolex 4',
-    r6: 'Rolex 5',
+    bv1: 'Bvlgari Diagono Scuba GMT, ref: SD38S GMT, 38mm',
+    bv2: 'Bvlgari Titanium, ref: TI38TA, 38mm',
+    bv3: 'Bvlgari Aluminium, ref: AL38TA, 38mm',
+    bv4: '',    
 
-    o1: 'Patek Philippe',
-    o2: 'Chopard',
-    o3: 'Tag Heuer',
+    o1: 'Patek Phillippe Ellipse, ref: 3545, 32 x 27 mm',
+    o2: 'Chopard Mille Miglia Chronograph, ref: 8331, 39mm',
+    o3: 'Tag Heuer Formula 1, ref: caz101e, 43mm',
+
+    // FALTO OMEGA
 }
 
 function redirecionarLink(watch) {

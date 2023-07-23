@@ -594,6 +594,12 @@ footer #footerSocial #img img {
 
 #itens .container .watches p {
     margin-top: 10%;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+#itens .container .watches span {
+    font-size: 0.7em;    
 }
 
 .image-zoom-container {
